@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".Activity.LoginActivity"
+        android:background="#fff"
+        android:fillViewport="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/logo2"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toTopOf="@id/top_guideline"
+                android:layout_marginBottom="@dimen/_11sdp"
+                app:layout_constraintBottom_toTopOf="@+id/user_name"
+                android:id="@+id/circleImageView"/>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="user name"
+                app:met_floatingLabel="normal"
+
+                android:ems="10"
+                android:id="@+id/user_name"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintBottom_toTopOf="@+id/passowrd"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:met_floatingLabel="normal"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="password"
+                android:id="@+id/passowrd"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/user_name"
+                app:layout_constraintBottom_toTopOf="@+id/login_btn"
+                android:layout_marginBottom="@dimen/_32sdp"/>
+
+        <Button
+                android:text="Log in"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_btn"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/passowrd"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/_32sdp"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/start_guideline"
+                                                    app:layout_constraintGuide_begin="20dp"
+                                                    android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/end_guideline"
+                                                    app:layout_constraintGuide_end="20dp"
+                                                    android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/top_guideline"
+                                                    app:layout_constraintGuide_begin="20dp"
+                                                    android:orientation="horizontal"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/bottom_guideline"
+                                                    app:layout_constraintGuide_end="20dp"
+                                                    android:orientation="horizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
